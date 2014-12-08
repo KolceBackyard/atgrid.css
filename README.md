@@ -1,4 +1,4 @@
-atGrid - Attribute-based grid system
+atGrid.css - CSS Grid System with HTML Attributes
 ======
 
 *atGrid is a CSS Grid System that uses HTML attributes instead of classes.*
