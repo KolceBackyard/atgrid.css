@@ -35,5 +35,3 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 .element
   at-column(1/2)
 ```
-
-##### More information at http://jameskolce.com/atgrid
