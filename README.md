@@ -27,11 +27,11 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 
 ```CSS
 .container
-  at-container()
+  ag-container()
 
 .element-container
-  at-row()
+  ag-row()
 
 .element
-  at-column(1/2)
+  ag-column(1/2)
 ```
