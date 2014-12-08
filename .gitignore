@@ -1,0 +1,4 @@
+node_modules/
+
+# IDE temporal files
+.idea/
