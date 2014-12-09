@@ -73,13 +73,15 @@ ag-row(clear-gutter = true)
 // @add-gutter = Set this to true if you want to create padding for the column
 //
 
-ag-column(size, add-gutter = true)
+ag-column(size, offset = 0, add-gutter = true)
   box-sizing border-box
   float left
   width size * 100%
   if add-gutter
     padding-left (gutter/2) px
     padding-right (gutter/2) px
+  if offset > 0
+    margin-left offset * 100%
 
 
 // STYLES
