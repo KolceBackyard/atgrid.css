@@ -36,7 +36,7 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
   ag-column(1/2)
 ```
 
-### Configuration
+## Configuration
 | Variable | Default value | Description |
 | --- | --- | --- |
 | container-width | 1200px | MAximum width for the container |
@@ -46,7 +46,7 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 | breakpoint | 48em | Below this point the columns will have width of 100%
 | only-semantic | false | Prevents the creation of predefined columns
 
-### Available Stylus mixins
+## Available Stylus mixins
 | Mixin | Options |
 | --- | --- | --- |
 | ag-container() | The *ag-container()* mixin doesn’t accepts any options. |
