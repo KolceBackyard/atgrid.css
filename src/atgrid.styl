@@ -33,7 +33,8 @@ only-semantic = false
 //
 // Container
 //
-// Use this mixin to create a row. Rows should be contained in a "container" element
+// Use this mixin to create a container. Rows should be contained in a "container" element
+// but is not mandatory if you want a full-width structure
 //
 
 ag-container()
@@ -69,7 +70,8 @@ ag-row(clear-gutter = true)
 //
 // Use this mixin to create a column
 //
-// @size = The size of the column, should be a number between 0-1. Example: 1/2
+// @size = The size of the column, should be a number between 0 and 1. Example: 1/2
+// @offset = The desplacement of the column to the right, should be a number between 0 and 1 - column-size. Example: 1/6
 // @add-gutter = Set this to true if you want to create padding for the column
 //
 
