@@ -64,4 +64,4 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 
 The MIT License (MIT)
 
-Copyright (c) 2014 James Kolce
+Copyright (c) 2015 James Kolce
