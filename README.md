@@ -3,7 +3,14 @@ atGrid.css - CSS Grid System with attribute selectors
 
 > *atGrid is a CSS Grid System that uses attributes instead of classes.*
 
-Instead of writing ``<div class="column-6 pull-column-2">`` you can write ``<div column="6 +2">``
+Instead of writing:
+```HTML 
+<div class="column-6 pull-column-2">
+``` 
+you can write 
+```HTML
+<div column="6 +2">
+```
 
 ### Examples:
 ```HTML
