@@ -59,3 +59,9 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 | ag-container() | The *ag-container()* mixin doesn’t accepts any options. |
 | ag-row(*&lt;clear-gutter: bool&gt;*) | The *ag-row()* mixin accepts a boolean option, True by default, this value should be true if you plan to contain columns with gutters. |
 | ag-column(*&lt;size: number&gt;, &lt;offset: number&gt;, &lt;add-gutter: bool&gt;*) | The *ag-column()* mixin accepts three options: <br> **Size:** Must be a number between 0 and 1 (e.g. 1/2). <br> **Offset:** Must be a number between 0 and 1 - the column size (e.g. 1/6) <br> **Add-gutter:** Must be a boolean, True by default, set to False if you want a column without gutters, in this case remember to set *ag-row(false)* |
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 James Kolce
