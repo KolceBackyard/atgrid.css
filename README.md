@@ -12,6 +12,12 @@ you can write
 <div column="6 +2">
 ```
 
+### Installation
+
+```
+$ npm install atgrid.css
+```
+
 ### Examples:
 ```HTML
 <main container>
