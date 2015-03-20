@@ -1,12 +1,12 @@
 {
   "name": "atgrid.css",
   "version": "1.0.0",
-  "description": "CSS Grid System with HTML Attributes",
+  "description": "CSS Grid System with attribute selectors",
   "author": "James Kolce <contact@jameskolce.com>",
   "license": "MIT",
-  "homepage": "https://github.com/jameskolce/atGrid",
+  "homepage": "http://atgrid.jameskolce.com",
   "bugs": {
-    "url": "https://github.com/jameskolce/atGrid/issues"
+    "url": "https://github.com/jameskolce/atgrid.css/issues"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jameskolce/atGrid.git"
+    "url": "https://github.com/jameskolce/atgrid.css.git"
   },
   "keywords": [
     "simple",
