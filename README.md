@@ -29,6 +29,10 @@ $ npm install atgrid.css
     <section column="4 +2">
       <!-- Element with a width of 4 columns and an offset of 2 columns-->
     </section>
+    
+    <section column>
+      <!-- Full width element (12 columns)  -->
+    </section>
   </div>
 </main>
 ```
