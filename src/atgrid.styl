@@ -38,13 +38,13 @@ only-semantic = false
 //
 
 ag-container()
-  box-sizing border-box
-  margin-left auto
-  margin-right auto
-  max-width container-width
-  padding-left (gutter/2) px
-  padding-right (gutter/2) px
-  width 100%
+  box-sizing: border-box
+  margin-left: auto
+  margin-right: auto
+  max-width: container-width
+  padding-left: (gutter/2) px
+  padding-right: (gutter/2) px
+  width: 100%
 
 //
 // Rows
@@ -56,14 +56,14 @@ ag-container()
 
 ag-row(clear-gutter = true)
   if clear-gutter
-    margin-left (gutter / -2) px
-    margin-right (gutter / -2) px
+    margin-left: (gutter / -2) px
+    margin-right: (gutter / -2) px
   &:before
   &:after
-    content ""
-    display table
+    content: ""
+    display: table
   &:after
-    clear both
+    clear: both
 
 //
 // Columns
@@ -76,14 +76,19 @@ ag-row(clear-gutter = true)
 //
 
 ag-column(size, offset = 0, add-gutter = true)
-  box-sizing border-box
-  float left
-  width size * 100%
+  box-sizing: border-box
+  float: left
+  width: 100%
+
+  if size < 1
+    @media (min-width: breakpoint)
+      width: size * 100%
+
   if add-gutter
-    padding-left (gutter/2) px
-    padding-right (gutter/2) px
+    padding-left: (gutter/2) px
+    padding-right: (gutter/2) px
   if offset > 0
-    margin-left offset * 100%
+    margin-left: offset * 100%
 
 
 // STYLES
