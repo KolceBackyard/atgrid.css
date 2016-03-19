@@ -1,6 +1,6 @@
 {
   "name": "atgrid.css",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "CSS Grid System with attribute selectors",
   "author": "James Kolce <contact@jameskolce.com>",
   "license": "MIT",
@@ -10,11 +10,11 @@
   },
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-stylus": "^0.20.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-stylus": "^0.22.0",
     "grunt-contrib-watch": "^0.6.1",
-    "load-grunt-tasks": "^1.0.0",
-    "time-grunt": "^1.0.0"
+    "load-grunt-tasks": "^3.3.0",
+    "time-grunt": "^1.2.2"
   },
   "repository": {
     "type": "git",
@@ -31,5 +31,8 @@
     "html",
     "css",
     "stylus"
-  ]
+  ],
+  "scripts": {
+    "start": "grunt"
+  }
 }
