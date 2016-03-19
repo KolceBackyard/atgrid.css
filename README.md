@@ -79,7 +79,7 @@ by setting `only-semantic` to `true`
 | --- | --- | --- |
 | ag-container() | The *ag-container()* mixin doesn’t accepts any options. |
 | ag-row(*&lt;add-gutter: bool&gt;*) | The *ag-row()* mixin accepts a boolean option, True by default where the columns won't have gutter |
-| ag-column(*&lt;size: number&gt;, &lt;offset: number&gt;*) | The *ag-column()* mixin accepts three options: <br> **Size:** Must be a number between 0 and 1 (e.g. 1/2). <br> **Offset:** Must be a number between 0 and 1 - the column size (e.g. 1/6) <br> **Add-gutter:** Must be a boolean, True by default, set to False if you want a column without gutters, in this case remember to set *ag-row(false)* |
+| ag-column(*&lt;size: number&gt;, &lt;offset: number&gt;*) | The *ag-column()* mixin accepts two options: <br> **Size:** Must be a number between 0 and 1 (e.g. 1/2). <br> **Offset:** Must be a number between 0 and 1 - the column size (e.g. 1/6) |
 
 ## License
 
