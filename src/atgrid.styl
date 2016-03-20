@@ -1,5 +1,5 @@
 /*!!
-* atGrid.css v2.0.0 - CSS Grid System with HTML Attributes
+* atGrid.css v3.0.0 - CSS Grid System with HTML Attributes
 * https://github.com/jameskolce/atGrid
 * Copyright 2016 James Kolce <contact@jameskolce.com>
 * Licensed under MIT License (https://github.com/jameskolce/atGrid/blob/master/LICENSE)
@@ -9,10 +9,10 @@
 // ==========================================================================
 
 // Max width for container (unit: 'px')
-container-width = 1200px
+container-width = 75em
 
 // Gutter size in pixels (without the unit we can do math easily)
-gutter = 30
+gutter = 2em
 
 // Number of columns in a row
 num-columns = 12
@@ -22,11 +22,10 @@ prefix = ''
 
 // Create the columns after this breakpoint (unit: 'em')
 // Set to 0 to create columns for all viewport sizes
-breakpoint = 0
+breakpoint = false
 
 // If you ONLY want to use the mixins for "semantic grids" set this to true
 only-semantic = false
-
 
 // MIXINS - You can use this to create "semantic grids"
 // ==========================================================================
@@ -43,33 +42,16 @@ ag-container()
   margin-left: auto
   margin-right: auto
   max-width: container-width
-  padding-left: (gutter/2) px
-  padding-right: (gutter/2) px
+  padding-left: (gutter/2)
+  padding-right: (gutter/2)
   width: 100%
 
-//
-// Rows
-//
-// Use this mixin to create a row. Columns should be contained in rows
-//
-// @clear-gutter = Set true to contain columns with gutter
-//
-
-ag-row(add-gutter = true)
   &:before
   &:after
     content: ""
     display: table
   &:after
     clear: both
-
-  if add-gutter
-    margin-left: (gutter / -2) px
-    margin-right: (gutter / -2) px
-
-    [{prefix}column]
-      padding-left: (gutter/2) px
-      padding-right: (gutter/2) px
 
 //
 // Columns
@@ -80,20 +62,23 @@ ag-row(add-gutter = true)
 // @offset = The desplacement of the column to the right, should be a number between 0 and 1 - column-size. Example: 1/6
 //
 
-ag-column(size, offset = 0)
+ag-column(size, offset = 0, gutters = true)
   box-sizing: border-box
   float: left
 
-  if breakpoint = 0
-    width: size * 100%
-  else
+  if breakpoint
     width: 100%
     @media (min-width: breakpoint)
       width: size * 100%
+  else
+    width: size * 100%
 
   if offset > 0
     margin-left: offset * 100%
 
+  if gutters
+    padding-left: (gutter/2)
+    padding-right: (gutter/2)
 
 // STYLES
 // ==========================================================================
@@ -103,64 +88,43 @@ unless only-semantic
   //
   // General styles
   //
-  // Basic styles for the container, rows and columns
-  //
-  // Put the columns inside the rows, and the rows inside a container.
+  // Basic styles for the container and columns
   //
 
   [{prefix}container]
     ag-container()
 
-  [{prefix}row]
-    ag-row()
-
   [{prefix}column]
     ag-column(1)
 
   //
-  // Utility attribute values
-  //
-  // When you need to adjust your grid
-  //
-
-  // Columns without gutters
-  [{prefix}row~='no-gutter']
-    margin-left: 0;
-    margin-right: 0;
-
-    [{prefix}column]
-      padding-left: 0;
-      padding-right: 0;
-
-  //
-  // Column styles
+  // Column widths and offsets
   //
   // Creates the width of the columns and their offset
   //
-  // To use this grid system you need to use the following syntax
-  // in your HTML files (This example uses default configuration):
-  //
-  // <main container>
-  //   <div row>
-  //     <section column="6">
-  //       <!-- Column with a width of 6 columns -->
-  //     </section>
-  //
-  //     <section column="4 +2">
-  //       <!-- Column with a width of 4 columns and an offset of 2 columns -->
-  //     </section>
-  //   </div>
-  // </main>
-  //
 
-  // Create columns on devices larger than 48em
-  @media (min-width: breakpoint)
+  columns()
     // Create columns
     for i in (1..num-columns)
       [{prefix}column~=\"{i}\"]
-        width (i/num-columns) * 100%
+        width: (i/num-columns) * 100%
 
     // Offset for columns
     for i in (1..num-columns - 1)
       [{prefix}column~=\"+{i}\"]
-        margin-left (i/num-columns) * 100%
+        margin-left: (i/num-columns) * 100%
+
+  // Create the columns inside a mediaquery if there is a breakpoint
+  if breakpoint
+    @media (min-width: breakpoint)
+      columns()
+  else
+    columns()
+
+  //
+  // Columns without gutters
+  //
+
+  [{prefix}column~='no-gutter']
+    padding-left: 0;
+    padding-right: 0;
