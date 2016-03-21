@@ -71,7 +71,7 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 ### `container`
 Sets the element as a container
 
-## `column="num-columns [+offset] [no-gutter]"`
+### `column="num-columns [+offset] [no-gutter]"`
 Sets the element as a column
 
 ## Configuration
