@@ -1,5 +1,4 @@
-atGrid.css - CSS Grid System with attribute selectors
-======
+# atGrid.css - CSS Grid System with attribute selectors
 
 > *atGrid is a CSS Grid System that uses attributes instead of classes.*
 
@@ -12,13 +11,13 @@ you can write
 <div column="6 +2">
 ```
 
-### Installation
+## Installation
 
 ```
 $ npm install atgrid.css
 ```
 
-### Examples:
+## Examples:
 ```HTML
 <section container>
   <!-- Default -->
@@ -68,44 +67,44 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 
 ## HTML Attributes
 
-### `container`
+#### `container`
 Sets the element as a container
 
-### `column="num-columns [+offset] [no-gutter]"`
+#### `column="num-columns [+offset] [no-gutter]"`
 Sets the element as a column
 
 ## Configuration
 
-### `container-width`
+#### `container-width`
 **Default:** 75em <br>
 **Description**: Maximum width of the container element
 
-### `gutter`
+#### `gutter`
 **Default:** 2em <br>
 **Description:** Space between columns
 
-### `num-columns`
+#### `num-columns`
 **Default:** 12 <br>
 **Description:** Number of columns
 
-### `prefix`
+#### `prefix`
 **Default:** '' <br>
 **Description:** Prefix for the attributes, use `data-` if you need valid HTML
 
-### `breakpoint`
+#### `breakpoint`
 **Default:** false <br>
 **Description:** Below this point the columns are expanded to 100%
 
-### `only-semantic`
+#### `only-semantic`
 **Default:** false <br>
 **Description:** Set this to true if you want to use only the mixins and avoid the generation of CSS code.
 
 ## Available Stylus mixins
 
-### `ag-container()`
+#### `ag-container()`
 **Description:** Creates a container element
 
-### `ag-column(size: *number*, [offset: *number*], [add-gutter: *bool*])`
+#### `ag-column(size: *number*, [offset: *number*], [add-gutter: *bool*])`
 **Description:** Creates a column element
 
 
