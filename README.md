@@ -77,27 +77,27 @@ Sets the element as a column
 ## Configuration
 
 ### `container-width`
-**Default:** 75em
+**Default:** 75em <br>
 **Description**: Maximum width of the container element
 
 ### `gutter`
-**Default:** 2em
+**Default:** 2em <br>
 **Description:** Space between columns
 
 ### `num-columns`
-**Default:** 12
+**Default:** 12 <br>
 **Description:** Number of columns
 
 ### `prefix`
-**Default:** ''
+**Default:** '' <br>
 **Description:** Prefix for the attributes, use `data-` if you need valid HTML
 
 ### `breakpoint`
-**Default:** false
+**Default:** false <br>
 **Description:** Below this point the columns are expanded to 100%
 
 ### `only-semantic`
-**Default:** false
+**Default:** false <br>
 **Description:** Set this to true if you want to use only the mixins and avoid the generation of CSS code.
 
 ## Available Stylus mixins
