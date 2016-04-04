@@ -55,7 +55,7 @@ Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
 .element
   ag-column(1/2)
   
-// Column with a width of 50% and an offset of "5%
+// Column with a width of 50% and an offset of 25%
 .element2
   ag-column(1/2, 1/4)
   
