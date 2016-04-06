@@ -8,11 +8,11 @@
 // CONFIGURATION
 // ==========================================================================
 
-// Max width for container (unit: 'px')
-$container-width: 75em;
+// Max width for container
+$container-width: 1200px;
 
-// Gutter size in pixels (without the unit we can do math easily)
-$gutter: 2em;
+// Gutter size in pixels
+$gutter: 30px;
 
 // Number of columns in a row
 $num-columns: 12;
@@ -20,7 +20,7 @@ $num-columns: 12;
 // Prefix for attributes
 $prefix: '';
 
-// Create the columns after this breakpoint (unit: 'em')
+// Create the columns after this breakpoint
 // Set to 0 to create columns for all viewport sizes
 $breakpoint: false;
 

@@ -8,9 +8,9 @@
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  max-width: 75em;
-  padding-left: 1em;
-  padding-right: 1em;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
 }
 [container]:before,
@@ -25,8 +25,8 @@
   box-sizing: border-box;
   float: left;
   width: 100%;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 [column~="1"] {
   width: 8.333333333333332%;
