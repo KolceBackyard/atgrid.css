@@ -1,4 +1,3 @@
 node_modules/
-
-# IDE temporal files
 .idea/
+dist/temp.atgrid.css

@@ -14,6 +14,7 @@
     "grunt-contrib-stylus": "^1.2.0",
     "grunt-contrib-watch": "^1.0.0",
     "load-grunt-tasks": "^3.4.1",
+    "node-sass": "^3.4.2",
     "time-grunt": "^1.3.0"
   },
   "repository": {
@@ -33,6 +34,7 @@
     "stylus"
   ],
   "scripts": {
-    "start": "grunt"
+    "build": "grunt",
+    "build:sass": "node-sass -w src/atgrid.scss dist/temp.atgrid.css"
   }
 }
