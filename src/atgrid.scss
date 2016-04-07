@@ -9,23 +9,23 @@
 // ==========================================================================
 
 // Max width for container
-$container-width: 1200px;
+$container-width: 1200px !default;
 
 // Gutter size in pixels
-$gutter: 30px;
+$gutter: 30px !default;
 
 // Number of columns in a row
-$num-columns: 12;
+$num-columns: 12 !default;
 
 // Prefix for attributes
-$prefix: '';
+$prefix: '' !default;
 
 // Create the columns after this breakpoint
 // Set to 0 to create columns for all viewport sizes
-$breakpoint: false;
+$breakpoint: false !default;
 
 // If you ONLY want to use the mixins for "semantic grids" set this to true
-$only-semantic: false;
+$only-semantic: false !default;
 
 // MIXINS - You can use this to create "semantic grids"
 // ==========================================================================
