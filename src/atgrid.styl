@@ -80,6 +80,23 @@ ag-column(size, offset = 0, gutters = true)
     padding-left: (gutter/2)
     padding-right: (gutter/2)
 
+//
+// Column widths and offsets
+//
+// Creates the width of the columns and their offset
+//
+
+columns()
+  // Create columns
+  for i in (1..num-columns)
+    [{prefix}column~=\"{i}\"]
+      width: (i/num-columns) * 100%
+
+  // Offset for columns
+  for i in (1..num-columns - 1)
+    [{prefix}column~=\"+{i}\"]
+      margin-left: (i/num-columns) * 100%
+
 // STYLES
 // ==========================================================================
 
@@ -96,23 +113,6 @@ unless only-semantic
 
   [{prefix}column]
     ag-column(1)
-
-  //
-  // Column widths and offsets
-  //
-  // Creates the width of the columns and their offset
-  //
-
-  columns()
-    // Create columns
-    for i in (1..num-columns)
-      [{prefix}column~=\"{i}\"]
-        width: (i/num-columns) * 100%
-
-    // Offset for columns
-    for i in (1..num-columns - 1)
-      [{prefix}column~=\"+{i}\"]
-        margin-left: (i/num-columns) * 100%
 
   // Create the columns inside a mediaquery if there is a breakpoint
   if breakpoint
