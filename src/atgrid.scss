@@ -1,12 +1,12 @@
 /*
-* atGrid.css v3.1.1 - CSS Grid System with HTML Attributes
-* https://github.com/jameskolce/atGrid
-* Copyright 2016 James Kolce <contact@jameskolce.com>
-* Licensed under MIT License (https://github.com/jameskolce/atGrid/blob/master/LICENSE)
+/* atGrid.css v4 - Attribute-based CSS Grid System
+/* https://github.com/kolcethompsonco/atgrid.css
+/* Licensed under MIT License - James Kolce <contact@jameskolce.com>
 */
 
-// CONFIGURATION
-// ==========================================================================
+//
+// Configuration
+// ----------------------------------------
 
 // Max width for container
 $container-width: 1200px !default;
@@ -20,129 +20,116 @@ $num-columns: 12 !default;
 // Prefix for attributes
 $prefix: '' !default;
 
-// Create the columns after this breakpoint
-// Set to 0 to create columns for all viewport sizes
-$breakpoint: false !default;
+// Below this size, the columns will collapse
+$breakpoint: 420px !default;
 
 // If you ONLY want to use the mixins for "semantic grids" set this to true
 $only-semantic: false !default;
 
-// MIXINS - You can use this to create "semantic grids"
-// ==========================================================================
 
 //
-// Container
-//
-// Use this mixin to create a container.
-//
+// Styles
+// ----------------------------------------
 
-@mixin ag-container() {
-  box-sizing: border-box;
+[container] {
   margin-left: auto;
   margin-right: auto;
   max-width: $container-width;
-  padding-left: ($gutter/2);
-  padding-right: ($gutter/2);
-  width: 100%;
-
-  &:before,
-  &:after {
-    content: '';
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
-}
-
-//
-// Columns
-//
-// Use this mixin to create a column
-//
-// @size = The size of the column, should be a number between 0 and 1. Example: 1/2
-// @offset = The desplacement of the column to the right, should be a number between 0 and 1 - column-size. Example: 1/6
-// @gutters = Set to false if you don't want gutters for the column
-//
-
-@mixin ag-column($size, $offset: 0, $gutters: true) {
+  padding-left: $gutter/2;
+  padding-right: $gutter/2;
   box-sizing: border-box;
-  float: left;
+}
 
-  @if $breakpoint {
-    width: 100%;
-    @media (min-width: $breakpoint) { width: $size * 100%; }
-  } @else {
-    width: $size * 100%;
-  }
+[grid] {
+  display: flex;
+  margin-left: $gutter / -2;
+  margin-right: $gutter / -2;
+}
 
-  @if $offset > 0 {
-    margin-left: $offset * 100%;
-  }
+[column] {
+  flex: 1;
+  box-sizing: border-box;
+}
 
-  @if $gutters {
-    padding-left: ($gutter/2);
-    padding-right: ($gutter/2);
+// Collapse columns on breakpoint
+@media (max-width: $breakpoint) {
+  [grid] {
+    flex-direction: column;
   }
 }
 
+
 //
-// Column widths and offsets
-//
-// Creates the width of the columns and their offset
+// Gutters
 //
 
-@mixin columns() {
-  // Create columns
-  @for $i from 1 through $num-columns {
-    [#{$prefix}column~="#{$i}"] {
-      width: ($i/$num-columns) * 100%;
-    }
-  }
-
-  // Offset for columns
-  @for $i from 1 through ($num-columns - 1) {
-    [#{$prefix}column~="+#{$i}"] {
-      margin-left: ($i/$num-columns) * 100%;
-    }
-  }
+[column] {
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
 }
 
-// STYLES
-// ==========================================================================
+//
+// No Gutters
+//
 
-@if not $only-semantic {
+[grid~="ng"] {
+  margin-left: 0;
+  margin-right: 0;
 
-  //
-  // General styles
-  //
-  // Basic styles for the container and columns
-  //
-
-  [#{$prefix}container] {
-    @include ag-container();
-  }
-
-  [#{$prefix}column] {
-    @include ag-column(1);
-  }
-
-  // Create the columns inside a media query if there is a breakpoint
-  @if $breakpoint {
-    @media (min-width: $breakpoint) {
-      @include columns();
-    }
-  } @else {
-    @include columns();
-  }
-
-  //
-  // Columns without gutters
-  //
-
-  [#{$prefix}column~='no-gutter'] {
+  [column] {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+//
+// Alignment of columns
+//
+
+[grid~="top"] {
+  align-items: flex-start;
+}
+
+[grid~="center"] {
+  align-items: center;
+}
+
+[grid~="bottom"] {
+  align-items: flex-end;
+}
+
+//
+// Alignment of individual columns
+//
+
+[column~="top"] {
+  align-self: flex-start;
+}
+
+[column~="center"] {
+  align-self: flex-end;
+}
+
+[column~="bottom"] {
+  align-self: center;
+}
+
+//
+// Column widths
+//
+
+@for $i from 1 through $num-columns {
+  [#{$prefix}column~="#{$i}"] {
+    flex: 0 1 ($i/$num-columns) * 100%;
+  }
+}
+
+//
+// Column offsets
+//
+
+@for $i from 1 through $num-columns {
+  [#{$prefix}column~="+#{$i}"] {
+    margin-left: ($i/$num-columns) * 100%;
   }
 }
