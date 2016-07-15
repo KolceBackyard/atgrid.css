@@ -1,7 +1,7 @@
 /*
-/* atGrid.css v4 - Attribute-based CSS Grid System
+/* atGrid.css v4.0.0 - Attribute-based CSS Grid System
 /* https://github.com/kolcethompsonco/atgrid.css
-/* Licensed under MIT License - James Kolce <contact@jameskolce.com>
+/* MIT License - James Kolce <james@kolcethompson.com>
 */
 
 //
@@ -11,8 +11,8 @@
 // Max width for container
 $container-width: 1200px !default;
 
-// Gutter size in pixels
-$gutter: 30px !default;
+// Gutter size
+$gutter: 2em !default;
 
 // Number of columns in a row
 $num-columns: 12 !default;
@@ -23,13 +23,14 @@ $prefix: '' !default;
 // Below this size, the columns will collapse
 $breakpoint: 420px !default;
 
-// If you ONLY want to use the mixins for "semantic grids" set this to true
-$only-semantic: false !default;
-
 
 //
 // Styles
 // ----------------------------------------
+
+* {
+  box-sizing: border-box;
+}
 
 [container] {
   margin-left: auto;
@@ -37,36 +38,33 @@ $only-semantic: false !default;
   max-width: $container-width;
   padding-left: $gutter/2;
   padding-right: $gutter/2;
-  box-sizing: border-box;
 }
 
 [grid] {
   display: flex;
   margin-left: $gutter / -2;
   margin-right: $gutter / -2;
-}
 
-[column] {
-  flex: 1;
-  box-sizing: border-box;
-}
-
-// Collapse columns on breakpoint
-@media (max-width: $breakpoint) {
-  [grid] {
+  // Collapse columns on breakpoint
+  @media (max-width: $breakpoint) {
     flex-direction: column;
   }
 }
 
+[column] {
+  flex: 1;
+}
+
 
 //
-// Gutters
+// Gutters by default
 //
 
 [column] {
   padding-left: $gutter / 2;
   padding-right: $gutter / 2;
 }
+
 
 //
 // No Gutters
@@ -82,8 +80,9 @@ $only-semantic: false !default;
   }
 }
 
+
 //
-// Alignment of columns
+// Alignment of all columns in a row
 //
 
 [grid~="top"] {
@@ -97,6 +96,7 @@ $only-semantic: false !default;
 [grid~="bottom"] {
   align-items: flex-end;
 }
+
 
 //
 // Alignment of individual columns
@@ -114,6 +114,7 @@ $only-semantic: false !default;
   align-self: center;
 }
 
+
 //
 // Column widths
 //
@@ -123,6 +124,7 @@ $only-semantic: false !default;
     flex: 0 1 ($i/$num-columns) * 100%;
   }
 }
+
 
 //
 // Column offsets

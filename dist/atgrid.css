@@ -1,32 +1,32 @@
 /*
-/* atGrid.css v4 - Attribute-based CSS Grid System
+/* atGrid.css v4.0.0 - Attribute-based CSS Grid System
 /* https://github.com/kolcethompsonco/atgrid.css
-/* Licensed under MIT License - James Kolce <contact@jameskolce.com>
+/* MIT License - James Kolce <james@kolcethompson.com>
 */
+* {
+  box-sizing: border-box; }
+
 [container] {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box; }
+  padding-left: 1em;
+  padding-right: 1em; }
 
 [grid] {
   display: flex;
-  margin-left: -15px;
-  margin-right: -15px; }
+  margin-left: -1em;
+  margin-right: -1em; }
+  @media (max-width: 420px) {
+    [grid] {
+      flex-direction: column; } }
 
 [column] {
-  flex: 1;
-  box-sizing: border-box; }
-
-@media (max-width: 420px) {
-  [grid] {
-    flex-direction: column; } }
+  flex: 1; }
 
 [column] {
-  padding-left: 15px;
-  padding-right: 15px; }
+  padding-left: 1em;
+  padding-right: 1em; }
 
 [grid~="ng"] {
   margin-left: 0;

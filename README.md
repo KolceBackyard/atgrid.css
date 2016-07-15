@@ -6,6 +6,7 @@ Instead of writing:
 ```HTML 
 <div class="column-6 pull-column-2">
 ``` 
+
 you can write 
 ```HTML
 <div column="6 +2">

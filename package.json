@@ -1,6 +1,6 @@
 {
   "name": "atgrid.css",
-  "version": "4",
+  "version": "4.0.0",
   "description": "CSS Grid System with attribute selectors",
   "author": "James Kolce <contact@jameskolce.com>",
   "license": "MIT",
