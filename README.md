@@ -182,23 +182,23 @@ Aligns the column vertically to the bottom of the grid.
 
 ## Configuration
 
-`container-width`
+`container-width` <br>
 **Default:** 1200px <br>
 **Description**: Maximum width of the container element.
 
-`gutter`
+`gutter` <br>
 **Default:** 2em <br>
 **Description:** Space between columns.
 
-`num-columns`
+`num-columns` <br>
 **Default:** 12 <br>
 **Description:** Number of columns.
 
-`prefix`
+`prefix` <br>
 **Default:** '' <br>
 **Description:** Prefix for the attributes, use `data-` if you need valid HTML.
 
-`breakpoint`
+`breakpoint` <br>
 **Default:** 420px <br>
 **Description:** Below this point the columns are expanded to 100%.
 
