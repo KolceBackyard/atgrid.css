@@ -60,7 +60,7 @@
 </div>
 ```
 
-### Columns with offsets and without gutters`
+### Columns with offsets and without gutters
 
 ```HTML
 <div grid="ng">
