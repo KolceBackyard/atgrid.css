@@ -18,6 +18,11 @@ you can write
 $ npm install atgrid.css
 ```
 
+## Browser Compatibility
+
+Since version 4.0.0, atGrid.css is based on Flexbox, you can see the table of compatibility 
+in the [Can I Use](http://caniuse.com/#feat=flexbox) site.
+
 ## Examples:
 ```HTML
 <section container>
