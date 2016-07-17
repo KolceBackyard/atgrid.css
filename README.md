@@ -1,16 +1,123 @@
 # atGrid.css - CSS Grid System with attribute selectors
 
-> *atGrid is a CSS Grid System that uses attributes instead of classes.*
+> atGrid is a Flexbox-based CSS Grid System that uses attributes instead of classes.
 
-Instead of writing:
+## Examples
+
+### Columns with the same width
+
 ```HTML 
-<div class="column-6 pull-column-2">
+<div grid>
+  <section column>
+    <p>Auto</p>
+  </section>
+
+  <section column>
+    <p>Auto</p>
+  </section>
+</div>
+```
+
+### Columns with a determined width
+
+```HTML
+<div grid>
+  <section column="8">
+    <p>8</p>
+  </section>
+
+  <section column="4">
+    <p>4</p>
+  </section>
+</div>
+```
+
+### Columns without gutters
+
+```HTML
+<div grid="ng">
+  <section column="8">
+    <p>8</p>
+  </section>
+
+  <section column="4">
+    <p>4</p>
+  </section>
+</div>
+```
+
+### Columns with offsets
+
+```HTML
+<div grid>
+  <section column="3">
+    <p>3</p>
+  </section>
+
+  <section column="3 +6">
+    <p>3 +6</p>
+  </section>
+</div>
+```
+
+### Columns with offsets and without gutters`
+
+```HTML
+<div grid="ng">
+  <section column="5">
+    <p>5</p>
+  </section>
+
+  <section column="5 +2">
+    <p>5 +2</p>
+  </section>
+</div>
+```
+
+### Nested grids
+
+```HTML
+<div grid>
+  <section column="4">
+    <p>4</p>
+  </section>
+
+  <section column="8">
+    <div grid>
+      <section column="6">
+        <p>6 > 8</p>
+      </section>
+
+      <section column="6">
+        <p>6 > 8</p>
+      </section>
+    </div>
+  </section>
+</div>
+```
+
+### Nested grids without gutters
+
+```HTML
+<div grid="ng">
+  <section column="4">
+    <p>4</p>
+  </section>
+
+  <section column="8">
+    <div grid="ng">
+      <section column="6">
+        <p>6 > 8</p>
+      </section>
+
+      <section column="6">
+        <p>6 > 8</p>
+      </section>
+    </div>
+  </section>
+</div>
 ``` 
 
-you can write 
-```HTML
-<div column="6 +2">
-```
 
 ## Installation
 
@@ -20,102 +127,82 @@ $ npm install atgrid.css
 
 ## Browser Compatibility
 
-Since version 4.0.0, atGrid.css is based on Flexbox, you can see the table of compatibility 
-in the [Can I Use](http://caniuse.com/#feat=flexbox) site.
-
-## Examples:
-```HTML
-<section container>
-  <!-- Default -->
-  <article column="6">
-    <!-- Element with a width of 6 columns -->
-  </article>
-
-  <!-- With offset -->
-  <article column="4 +2">
-    <!-- Element with a width of 4 columns and an offset of 2 columns-->
-  </article>
-</section>
-
-<section>
-  <!-- Default with no gutters -->
-  <article column="6 no-gutter">
-    <!-- Element with a width of 6 columns and no guters -->
-  </article>
-
-  <!-- With offset and no gutters -->
-  <article column="4 +2 no-gutter">
-    <!-- Element with a width of 4 columns, an offset of 2 columns and no gutter-->
-  </article>
-</section>
-```
-
-
-Also you can use atGrid.css like other "semantic" grid systems (Using Stylus):
-
-```Stylus
-.container
-  ag-container()
-
-// Column with a width of 50%
-.element
-  ag-column(1/2)
-  
-// Column with a width of 50% and an offset of 25%
-.element2
-  ag-column(1/2, 1/4)
-  
-// Column with a width of 50%, an offset of 25% and without gutters
-.element3
-  ag-column(1/2, 1/4, false)
-```
+Since version 4.0.0, atGrid.css is based on Flexbox, you can see the table of compatibility in the [Can I Use](http://caniuse.com/#feat=flexbox) site.
 
 
 ## HTML Attributes
 
-#### `container`
-Sets the element as a container
+`container`
+Sets the element as a container, the container element will have a fixed max-width and will be centered on the page.
 
-#### `column="num-columns [+offset] [no-gutter]"`
-Sets the element as a column
+`grid`
+Sets the element as a grid element. This is a required element, and should be direct parent of the column elements.
+
+`column`
+Sets the element as a column, should always be used inside a grid element. A column can also contain a grid element to nest grids.
+
+## Attribute values
+
+### Container
+
+The container element doesn't accept any values.
+
+### Grid
+
+`ng`
+Will create a grid where the columns doesn't have gutters.
+
+`top`
+Aligns all the columns inside vertically to the top of the grid.
+
+`center`
+Aligns all the columns inside vertically to the center of the grid.
+
+`bottom`
+Aligns all the columns inside vertically to the bottom of the grid.
+
+
+### Column
+
+`<width>`
+The width of the column, by default from 1 to 12.
+
+`+<offset>`
+The offset of the column, by default from 1 to 11.
+
+`top`
+Aligns the column vertically to the top of the grid.
+
+`center`
+Aligns the column vertically to the center of the grid.
+
+`bottom`
+Aligns the column vertically to the bottom of the grid.
+
 
 ## Configuration
 
-#### `container-width`
-**Default:** 75em <br>
-**Description**: Maximum width of the container element
+`container-width`
+**Default:** 1200px <br>
+**Description**: Maximum width of the container element.
 
-#### `gutter`
+`gutter`
 **Default:** 2em <br>
-**Description:** Space between columns
+**Description:** Space between columns.
 
-#### `num-columns`
+`num-columns`
 **Default:** 12 <br>
-**Description:** Number of columns
+**Description:** Number of columns.
 
-#### `prefix`
+`prefix`
 **Default:** '' <br>
-**Description:** Prefix for the attributes, use `data-` if you need valid HTML
+**Description:** Prefix for the attributes, use `data-` if you need valid HTML.
 
-#### `breakpoint`
-**Default:** false <br>
-**Description:** Below this point the columns are expanded to 100%
-
-#### `only-semantic`
-**Default:** false <br>
-**Description:** Set this to true if you want to use only the mixins and avoid the generation of CSS code.
-
-## Available Stylus mixins
-
-#### `ag-container()`
-**Description:** Creates a container element
-
-#### `ag-column(size: *number*, [offset: *number*], [add-gutter: *bool*])`
-**Description:** Creates a column element
+`breakpoint`
+**Default:** 420px <br>
+**Description:** Below this point the columns are expanded to 100%.
 
 
 ## License
 
-The MIT License (MIT)
-
-Copyright (c) 2016 James Kolce
+The MIT License - James Kolce
