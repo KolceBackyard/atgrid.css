@@ -1,5 +1,8 @@
 # atGrid.css - CSS Grid System with attribute selectors
 
+[![npm version](https://badge.fury.io/js/atgrid.css.svg)](https://badge.fury.io/js/atgrid.css)
+
+
 > atGrid is a Flexbox-based CSS Grid System that uses attributes instead of classes.
 
 ## Examples
