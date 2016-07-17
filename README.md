@@ -180,7 +180,7 @@ Aligns the column vertically to the center of the grid.
 Aligns the column vertically to the bottom of the grid.
 
 
-## Configuration
+## Sass configuration
 
 `container-width` <br>
 **Default:** 1200px <br>
