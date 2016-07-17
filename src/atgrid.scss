@@ -23,7 +23,6 @@ $prefix: '' !default;
 // Below this size, the columns will collapse
 $breakpoint: 420px !default;
 
-
 //
 // Styles
 // ----------------------------------------
@@ -55,7 +54,6 @@ $breakpoint: 420px !default;
   flex: 1;
 }
 
-
 //
 // Gutters by default
 //
@@ -64,7 +62,6 @@ $breakpoint: 420px !default;
   padding-left: $gutter / 2;
   padding-right: $gutter / 2;
 }
-
 
 //
 // No Gutters
@@ -79,7 +76,6 @@ $breakpoint: 420px !default;
     padding-right: 0;
   }
 }
-
 
 //
 // Alignment of all columns in a row
@@ -97,7 +93,6 @@ $breakpoint: 420px !default;
   align-items: flex-end;
 }
 
-
 //
 // Alignment of individual columns
 //
@@ -107,13 +102,12 @@ $breakpoint: 420px !default;
 }
 
 [column~="center"] {
-  align-self: flex-end;
-}
-
-[column~="bottom"] {
   align-self: center;
 }
 
+[column~="bottom"] {
+  align-self: flex-end;
+}
 
 //
 // Column widths
@@ -124,7 +118,6 @@ $breakpoint: 420px !default;
     flex: 0 1 ($i/$num-columns) * 100%;
   }
 }
-
 
 //
 // Column offsets

@@ -48,10 +48,10 @@
   align-self: flex-start; }
 
 [column~="center"] {
-  align-self: flex-end; }
+  align-self: center; }
 
 [column~="bottom"] {
-  align-self: center; }
+  align-self: flex-end; }
 
 [column~="1"] {
   flex: 0 1 8.33333%; }
