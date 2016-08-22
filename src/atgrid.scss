@@ -125,6 +125,7 @@ $breakpoint: 420px !default;
   @for $i from 1 through $num-columns {
     [#{$prefix}column~="#{$i}"] {
       flex: 0 1 ($i/$num-columns) * 100%;
+      max-width: ($i/$num-columns) * 100%;
     }
   }
 
