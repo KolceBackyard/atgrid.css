@@ -118,22 +118,22 @@ $breakpoint: 420px !default;
   align-self: flex-end;
 }
 
-//
-// Column widths
-//
-
-@for $i from 1 through $num-columns {
-  [#{$prefix}column~="#{$i}"] {
-    flex: 0 1 ($i/$num-columns) * 100%;
+@media ($breakpoint) {
+  //
+  // Column widths
+  //
+  @for $i from 1 through $num-columns {
+    [#{$prefix}column~="#{$i}"] {
+      flex: 0 1 ($i/$num-columns) * 100%;
+    }
   }
-}
 
-//
-// Column offsets
-//
-
-@for $i from 1 through $num-columns {
-  [#{$prefix}column~="+#{$i}"] {
-    margin-left: ($i/$num-columns) * 100%;
+  //
+  // Column offsets
+  //
+  @for $i from 1 through $num-columns {
+    [#{$prefix}column~="+#{$i}"] {
+      margin-left: ($i/$num-columns) * 100%;
+    }
   }
 }

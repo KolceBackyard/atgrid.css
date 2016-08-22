@@ -57,74 +57,52 @@
 [column~="bottom"] {
   align-self: flex-end; }
 
-[column~="1"] {
-  flex: 0 1 8.33333%; }
-
-[column~="2"] {
-  flex: 0 1 16.66667%; }
-
-[column~="3"] {
-  flex: 0 1 25%; }
-
-[column~="4"] {
-  flex: 0 1 33.33333%; }
-
-[column~="5"] {
-  flex: 0 1 41.66667%; }
-
-[column~="6"] {
-  flex: 0 1 50%; }
-
-[column~="7"] {
-  flex: 0 1 58.33333%; }
-
-[column~="8"] {
-  flex: 0 1 66.66667%; }
-
-[column~="9"] {
-  flex: 0 1 75%; }
-
-[column~="10"] {
-  flex: 0 1 83.33333%; }
-
-[column~="11"] {
-  flex: 0 1 91.66667%; }
-
-[column~="12"] {
-  flex: 0 1 100%; }
-
-[column~="+1"] {
-  margin-left: 8.33333%; }
-
-[column~="+2"] {
-  margin-left: 16.66667%; }
-
-[column~="+3"] {
-  margin-left: 25%; }
-
-[column~="+4"] {
-  margin-left: 33.33333%; }
-
-[column~="+5"] {
-  margin-left: 41.66667%; }
-
-[column~="+6"] {
-  margin-left: 50%; }
-
-[column~="+7"] {
-  margin-left: 58.33333%; }
-
-[column~="+8"] {
-  margin-left: 66.66667%; }
-
-[column~="+9"] {
-  margin-left: 75%; }
-
-[column~="+10"] {
-  margin-left: 83.33333%; }
-
-[column~="+11"] {
-  margin-left: 91.66667%; }
-
-[column~="+12"] {
-  margin-left: 100%; }
+@media (420px) {
+  [column~="1"] {
+    flex: 0 1 8.33333%; }
+  [column~="2"] {
+    flex: 0 1 16.66667%; }
+  [column~="3"] {
+    flex: 0 1 25%; }
+  [column~="4"] {
+    flex: 0 1 33.33333%; }
+  [column~="5"] {
+    flex: 0 1 41.66667%; }
+  [column~="6"] {
+    flex: 0 1 50%; }
+  [column~="7"] {
+    flex: 0 1 58.33333%; }
+  [column~="8"] {
+    flex: 0 1 66.66667%; }
+  [column~="9"] {
+    flex: 0 1 75%; }
+  [column~="10"] {
+    flex: 0 1 83.33333%; }
+  [column~="11"] {
+    flex: 0 1 91.66667%; }
+  [column~="12"] {
+    flex: 0 1 100%; }
+  [column~="+1"] {
+    margin-left: 8.33333%; }
+  [column~="+2"] {
+    margin-left: 16.66667%; }
+  [column~="+3"] {
+    margin-left: 25%; }
+  [column~="+4"] {
+    margin-left: 33.33333%; }
+  [column~="+5"] {
+    margin-left: 41.66667%; }
+  [column~="+6"] {
+    margin-left: 50%; }
+  [column~="+7"] {
+    margin-left: 58.33333%; }
+  [column~="+8"] {
+    margin-left: 66.66667%; }
+  [column~="+9"] {
+    margin-left: 75%; }
+  [column~="+10"] {
+    margin-left: 83.33333%; }
+  [column~="+11"] {
+    margin-left: 91.66667%; }
+  [column~="+12"] {
+    margin-left: 100%; } }
