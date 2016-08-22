@@ -87,6 +87,14 @@ $breakpoint: 420px !default;
 }
 
 //
+// Wrap columns
+//
+
+[grid~="wrap"] {
+  flex-wrap: wrap;
+}
+
+//
 // Alignment of all columns in a row
 //
 

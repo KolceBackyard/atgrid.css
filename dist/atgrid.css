@@ -39,6 +39,9 @@
   flex-direction: row;
   flex-wrap: nowrap; }
 
+[grid~="wrap"] {
+  flex-wrap: wrap; }
+
 [grid~="top"] {
   align-items: flex-start; }
 
