@@ -35,6 +35,10 @@
     padding-left: 0;
     padding-right: 0; }
 
+[grid~="nc"] {
+  flex-direction: row;
+  flex-wrap: nowrap; }
+
 [grid~="top"] {
   align-items: flex-start; }
 

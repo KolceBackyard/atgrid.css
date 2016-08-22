@@ -78,6 +78,15 @@ $breakpoint: 420px !default;
 }
 
 //
+// No Collapse columns
+//
+
+[grid~="nc"] {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+//
 // Alignment of all columns in a row
 //
 
