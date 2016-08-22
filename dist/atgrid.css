@@ -57,7 +57,7 @@
 [column~="bottom"] {
   align-self: flex-end; }
 
-@media (420px) {
+@media (min-width: 420px) {
   [column~="1"] {
     flex: 0 1 8.33333%; }
   [column~="2"] {

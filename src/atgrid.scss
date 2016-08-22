@@ -118,7 +118,7 @@ $breakpoint: 420px !default;
   align-self: flex-end;
 }
 
-@media ($breakpoint) {
+@media (min-width: $breakpoint) {
   //
   // Column widths
   //
