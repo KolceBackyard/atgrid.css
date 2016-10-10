@@ -2,11 +2,11 @@
   "name": "atgrid.css",
   "version": "4.0.0",
   "description": "CSS Grid System with attribute selectors",
-  "author": "James Kolce <contact@kolcethompson.com>",
+  "author": "James Kolce <contact@jameskolce.com>",
   "license": "MIT",
-  "homepage": "https://github.com/kolcethompsonco/atgrid.css",
+  "homepage": "https://github.com/jameskolce/atgrid.css",
   "bugs": {
-    "url": "https://github.com/kolcethompsonco/atgrid.css/issues"
+    "url": "https://github.com/jameskolce/atgrid.css/issues"
   },
   "devDependencies": {
     "cssnano-cli": "^1.0.4",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kolcethompsonco/atgrid.css.git"
+    "url": "https://github.com/jameskolce/atgrid.css.git"
   },
   "keywords": [
     "simple",
