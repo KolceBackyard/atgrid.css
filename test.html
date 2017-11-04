@@ -6,7 +6,7 @@
     <title>atGrid.css Test File</title>
     <meta name="description" content="Test file for atGrid.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/atgrid.css">
+    <link rel="stylesheet" href="atgrid.css">
 
     <!-- Test only -->
     <style>
@@ -200,7 +200,7 @@
     <section container>
       <h2>Without gutter</h2>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column>
           <p>Auto</p>
         </section>
@@ -250,7 +250,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column>
           <p>Auto</p>
         </section>
@@ -276,7 +276,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column>
           <p>Auto</p>
         </section>
@@ -294,7 +294,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column>
           <p>Auto</p>
         </section>
@@ -308,7 +308,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column>
           <p>Auto</p>
         </section>
@@ -318,7 +318,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="8">
           <p>8</p>
         </section>
@@ -328,7 +328,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="10">
           <p>10</p>
         </section>
@@ -343,7 +343,7 @@
     <section container>
       <h2>No collapse columns</h2>
 
-      <div grid="nc">
+      <div grid="no-collapse">
         <section column>
           <p>4</p>
         </section>
@@ -477,79 +477,79 @@
     <section container>
       <h2>Offset columns without gutter</h2>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +1">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +2">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +3">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +4">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +5">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +6">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +7">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +8">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +9">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +10">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1 +11">
           <p>1</p>
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="5">
           <p>5</p>
         </section>
@@ -559,7 +559,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="4">
           <p>4</p>
         </section>
@@ -569,7 +569,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="3">
           <p>3</p>
         </section>
@@ -579,7 +579,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="2">
           <p>2</p>
         </section>
@@ -589,7 +589,7 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="1">
           <p>1</p>
         </section>
@@ -693,7 +693,7 @@
     <section container>
       <h2>Nested grid without gutters</h2>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column>
           <p>1</p>
         </section>
@@ -743,13 +743,13 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="4">
           <p>4</p>
         </section>
 
         <section column="8">
-          <div grid="ng">
+          <div grid="no-gutter">
             <section column="6">
               <p>6 > 8</p>
             </section>
@@ -761,13 +761,13 @@
         </section>
       </div>
 
-      <div grid="ng">
+      <div grid="no-gutter">
         <section column="4">
           <p>4</p>
         </section>
 
         <section column="8">
-          <div grid="ng">
+          <div grid="no-gutter">
             <section column="3">
               <p>3 > 8</p>
             </section>
@@ -848,6 +848,42 @@
 
         <section column="bottom">
           <p>Bottom</p>
+        </section>
+      </div>
+    </section>
+
+    <section container>
+      <h2>Column order</h2>
+
+      <div grid>
+        <section column="#2">
+          <p>First col #2</p>
+        </section>
+
+        <section column="#3">
+          <p>Second col #3</p>
+        </section>
+
+        <section column="#1">
+          <p>Third col #1</p>
+        </section>
+      </div>
+    </section>
+
+    <section container="solid">
+      <h2>Solid container</h2>
+
+      <div grid>
+        <section column>
+          <p>4</p>
+        </section>
+
+        <section column>
+          <p>4</p>
+        </section>
+
+        <section column>
+          <p>4</p>
         </section>
       </div>
     </section>
