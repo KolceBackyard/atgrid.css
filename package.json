@@ -8,8 +8,10 @@
   "bugs": {
     "url": "https://github.com/jameskolce/atgrid.css/issues"
   },
+  "main": "atgrid.ccss",
   "devDependencies": {
-    "cssnano-cli": "^1.0.5"
+    "cssnano-cli": "^1.0.5",
+    "@concisecss/cli": "^0.1.0"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
     "flexbox"
   ],
   "scripts": {
-    "build": "cssnano atgrid.css atgrid.min.css"
+    "build": "concise compile atgrid.ccss atgrid.css",
+    "minify": "cssnano atgrid.css atgrid.min.css"
   }
 }
