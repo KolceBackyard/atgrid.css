@@ -43,8 +43,8 @@
 
 [column] {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding-left: calc(var(--ag-gutter) / 2);
   padding-right: calc(var(--ag-gutter) / 2);
 }
